@@ -31,13 +31,13 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "hi":
         await query.message.edit_text(
-            text = f"<b> hi bro</b>",
+            text = f"<b>⚙️@JNS_BOTS \n ⚙️@JNS_FC_BOTS</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                  [
                     [
-                      
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                      InlineKeyboardButton("🔒BACK", callback_data = "start"),
+                      InlineKeyboardButton("🔒CLOSE", callback_data = "close")
                     ]
                 ]
             )
