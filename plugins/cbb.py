@@ -7,9 +7,27 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
-    
-hello = "how are you"
-)
+    data = query.data
+    if data == "hello":
+        await query.message.edit_text(
+            text = f"<b>○ Creator 111: <a href='tg://user?id={OWNER_ID}'>JINTO NS</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Channel : @JNS_BOTS\n○ Support Group : @JNS_FC_BOTS</b>",
+            disable_web_page_preview = True,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    ]
+                ]
+            )
+        )
+    elif data == "close":
+        await query.message.delete()
+        try:
+            await query.message.reply_to_message.delete()
+        except:
+           pass
+
+
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
