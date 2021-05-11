@@ -29,9 +29,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
-    if data == "support":
+    if data == "hi":
         await query.message.edit_text(
-            text = f"<b>always Support available from <a href="https://t.me/JNS_BOTS">JNS BOTS</a></b>",
+            text = f"<b> hi bro</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                
