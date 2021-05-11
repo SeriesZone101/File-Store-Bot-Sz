@@ -34,7 +34,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             text = f"<b> hi bro</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
-               
+                 [
                     [
                       
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
