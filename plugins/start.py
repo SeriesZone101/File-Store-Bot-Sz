@@ -65,7 +65,7 @@ async def start_command(client: Client, message: Message):
                     InlineKeyboardButton("⭕Close⭕", callback_data = "close")
                 ],
                 [
-                    InlineKeyboardButton("About Bot", callback_data="about"),
+                    InlineKeyboardButton("developer", callback_data="developer"),
                     InlineKeyboardButton("About Dev", callback_data="about")
                 ]
             ]
