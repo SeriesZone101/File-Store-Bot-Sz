@@ -63,12 +63,17 @@ async def start_command(client: Client, message: Message):
                 [
                     InlineKeyboardButton("⭕About Me⭕", callback_data = "about"),
                     InlineKeyboardButton("⭕Close⭕", callback_data = "close")
+                ],
+                [
+                    InlineKeyboardButton("About Bot", callback_data="about"),
+                    InlineKeyboardButton("About Dev", callback_data="about")
                 ]
             ]
         )
         await message.reply_text(
             text = START_MSG.format(firstname = message.chat.first_name),
             reply_markup = reply_markup,
+            parse_mode="Markdown",
             disable_web_page_preview = True,
             quote = True
         )
