@@ -29,13 +29,15 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
-    if data == "developer":
+    if data == "support_channel":
         await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>JINTO NS</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Channel : @JNS_BOTS\n○ Support Group : @JNS_FC_BOTS</b>",
+            text = f"<b>always Support available from <a href="https://t.me/JNS_BOTS">JNS BOTS</a></b>",
+            parse_mode="Markdown",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
-                [
+               
                     [
+                        InlineKeyboardButton("Back", callback_data = "about"),
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
                     ]
                 ]
