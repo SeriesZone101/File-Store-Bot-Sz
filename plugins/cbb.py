@@ -32,6 +32,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     if data == "hi":
         await query.message.edit_text(
             text = f"<b>⚙️@JNS_BOTS \n ⚙️@JNS_FC_BOTS</b>",
+            parse_mode="Markdown",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                  [
@@ -54,6 +55,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     if data == "movie1":
         await query.message.edit_text(
             text = f"<b>⚙️@FCfilmcornerNR \n ⚙️@FCfilmcornerfc</b>",
+            parse_mode="Markdown",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                  [
