@@ -28,7 +28,7 @@ async def channel_post(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup(
       [
         [  InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}'),
-           InlineKeyboardButton("⭕CLOSE🔒⭕", callback_data="close")
+           InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')
         ]
       ]
      )
@@ -44,7 +44,7 @@ async def new_post(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup(
       [
         [  InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}'),
-           InlineKeyboardButton("⭕CLOSE🔒⭕", callback_data="close")
+           InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')
         ]
       ]
      )
