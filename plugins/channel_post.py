@@ -32,7 +32,7 @@ async def channel_post(client: Client, message: Message):
         ]
       ]
      )
-    await reply_text.edit(f"<b>Here is your link</b>\n\n{link}", reply_markup=reply_markup, disable_web_page_preview = True)
+    await reply_text.edit(f"<b>Here is your link</b>\n\n{link}", reply_markup=reply_markup,parse_mode="Markdown", disable_web_page_preview = True)
     await post_message.edit_reply_markup(reply_markup)
 
 @Bot.on_message(filters.channel & filters.incoming & filters.chat(CHANNEL_ID) & ~filters.edited)
@@ -49,7 +49,7 @@ async def new_post(client: Client, message: Message):
       ]
      )
       try:
-        await message.edit_reply_markup(reply_markup)
+        await message.edit_reply_markup(reply_markup), parse_mode="Markdown"
     except Exception as e:
         print(e)
         pass
